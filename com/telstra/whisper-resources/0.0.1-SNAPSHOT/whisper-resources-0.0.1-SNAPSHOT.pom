@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.telstra</groupId>
+	<artifactId>whisper-resources</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>whisper-resources</name>
+	<description>project encompassing resources for the whisper application</description>
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
+	<scm>
+		<url>https://svn.icm-consulting.com.au/Telstra/whisperII</url>
+		<connection>scm:svn:https://svn.icm-consulting.com.au/Telstra/whisperII/trunk</connection>
+		<developerConnection>scm:svn:https://svn.icm-consulting.com.au/Telstra/whisperII/trunk</developerConnection>
+	</scm>
+
+	<repositories>
+	    <repository>
+	      <id>all</id>
+	      <name>Archiva Managed Repositories</name>
+	      <url>http://archiva.icm-consulting.com.au/archiva/repository/all/</url>
+	      <releases>
+	        <enabled>true</enabled>
+	      </releases>
+	      <snapshots>
+	        <enabled>true</enabled>
+	      </snapshots>
+	    </repository>
+	    <repository>
+	      <id>icm-all</id>
+	      <name>ICM Archiva Managed Repositories</name>
+	      <url>http://archiva.icm-consulting.com.au/archiva/repository/icm-all/</url>
+	      <releases>
+	        <enabled>true</enabled>
+	      </releases>
+	      <snapshots>
+	        <enabled>true</enabled>
+	      </snapshots>
+	    </repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>icm-releases</id>
+			<url>http://archiva.icm-consulting.com.au/archiva/repository/icm-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>icm-snapshots</id>
+			<url>http://archiva.icm-consulting.com.au/archiva/repository/icm-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<pluginRepositories>
+		<pluginRepository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>all</id>
+			<name>Archiva Managed Repositories</name>
+			<url>http://archiva.icm-consulting.com.au/archiva/repository/all/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<inherited>true</inherited>
+					<version>2.4.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
